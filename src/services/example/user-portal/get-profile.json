@@ -1,0 +1,50 @@
+{
+  "isSuccess": true,
+  "error": null,
+  "errors": null,
+  "status": 200,
+  "data": {
+      "lastLoginDate": "22/11/2022 13:58:05",
+      "lastChangePasswordDate": null,
+      "userId": "62f17665-519e-4e5c-abe8-f49be307e73e",
+      "userName": "supakore@cementhai.co.th",
+      "normalizedUserName": "supakore",
+      "email": "supakore@scg.com",
+      "phoneNumber": "",
+      "accessFailedCount": 0,
+      "firstName": "Supakorn",
+      "lastName": "Emchananon",
+      "domain": "cementhai",
+      "organization": "0201300007",
+      "lockoutEnabled": false,
+      "mustChangePassword": false,
+      "twoFactorEnabled": false,
+      "activeFlag": true,
+      "createdDate": "14/09/2022 17:45:01",
+      "createdBy": "pakjirkh",
+      "updatedDate": "22/11/2022 14:46:20",
+      "updatedBy": "kittiharu@cementhai.co.th",
+      "applications": [
+          {
+              "userApplicationId": "c2bce68d-93b1-40ad-bd2e-9e4943b12b9c",
+              "appId": 1,
+              "appName": "User Portal",
+              "clientId": "user",
+              "groupId": 1,
+              "groupName": "System Admin",
+              "userCustomMetadata": null
+          },
+          {
+              "userApplicationId": "8dc0ea03-69fd-476a-b0cb-748678d78bcd",
+              "appId": 3,
+              "appName": "Customer Analytics",
+              "clientId": "customer",
+              "groupId": 3,
+              "groupName": "System Admin",
+              "userCustomMetadata": null
+          }
+      ]
+  },
+  "totalRecords": null,
+  "duration": null
+}

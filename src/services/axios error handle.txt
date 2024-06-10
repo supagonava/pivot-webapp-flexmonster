@@ -1,0 +1,13 @@
+try {
+    let res = await axios.get('/my-api-route');
+
+    // Work with the response...
+} catch (err) {
+    if (err.response) {
+        // The client was given an error response (5xx, 4xx)
+    } else if (err.request) {
+        // The client never received a response, and the request was never left
+    } else {
+        // Anything else
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pivot Web App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="%APP_URL%/public/styles/dist.tailwind.css" rel="stylesheet" />
+    <link href="%APP_URL%/flexmonster/flexmonster.css" rel="stylesheet" />
+    <script src="%APP_URL%/flexmonster/flexmonster.js" type="text/javascript"></script>
+    <script type="text/javascript" src="%APP_URL%/flexmonster/toolbar/flexmonster.toolbar.js"></script>
+  </head>
+
+  <body>
+    <!-- Add relative class to container -->
+    <div id="loading-overlay" class="fixed top-0 left-0 w-screen h-screen z-10">
+      <!-- loading overlay -->
+
+      <div class="absolute bg-white bg-opacity-60 z-10 h-full w-full flex items-center justify-center">
+        <div class="flex items-center">
+          <span class="text-3xl mr-4" id="loading-text">Loading</span>
+          <!-- loading icon -->
+          <svg class="animate-spin h-5 w-5 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          <!-- end loading icon -->
+        </div>
+      </div>
+
+      <!-- end loading overlay -->
+    </div>
+
+    <section id="app" style="z-index: 1 !important">
+      <div class="bg-red-500 flex flex-col items-center justify-center">
+        <h3 class="text-white font-bold" id="title">SCGL PIVOT APP</h3>
+      </div>
+      <div class="wrap">
+        <div id="pivot-container"></div>
+        <script>
+          const session = {};
+          const baseUrl = '%APP_URL%';
+
+          if (session.pivot && session.pivot.endpoint_headers) {
+            session.pivot.endpoint_headers = JSON.parse(session.pivot.endpoint_headers);
+          }
+          if (session.pivot && session.pivot.endpoint_payloads) {
+            session.pivot.endpoint_payloads = JSON.parse(session.pivot.endpoint_payloads);
+          }
+          if (session.pivot && session.pivot.pivot_config) {
+            session.pivot.pivot_config = JSON.parse(session.pivot.pivot_config);
+          }
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js" type="text/javascript"></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+          integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        ></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+        <script src="%APP_URL%/public/scripts/main.js" type="text/javascript"></script>
+      </div>
+    </section>
+  </body>
+</html>
